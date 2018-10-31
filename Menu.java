@@ -1,24 +1,20 @@
-import javax.swing.JOptionPane;
 import java.awt.FlowLayout;
 
-public class Menu
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class Menu extends JFrame
 {
 
-    public static void main(String[] args)
+    private JLabel item;
+
+    public Menu()
     {
-        firstGui();
+        super("My First Gui");
+        setLayout(new FlowLayout());
+        item = new JLabel("First Gui");
+        item.setToolTipText(getName());
+        add(item);
     }
 
-    private static void firstGui()
-    {
-        String fn = JOptionPane.showInputDialog("Enter First Number");
-        String fs = JOptionPane.showInputDialog("Enter Second Number");
-
-        int num1 = Integer.parseInt(fn);
-        int num2 = Integer.parseInt(fs);
-        int sum = num1 + num2;
-
-        JOptionPane.showMessageDialog(null, "The answer is " + sum, "Simple Adder", JOptionPane.PLAIN_MESSAGE);
-
-    }
 }
