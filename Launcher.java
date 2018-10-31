@@ -1,3 +1,4 @@
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 public class Launcher
@@ -6,7 +7,13 @@ public class Launcher
 
     public static void main(String[] args)
     {
-        firstGui();
+        Menu menu = new Menu();
+        
+        menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        menu.setSize(840, 100);
+        menu.setVisible(true);
+        
+       // firstGui();
     }
 
     private static void firstGui()
